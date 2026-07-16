@@ -3,140 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio | หน้าแรก</title>
+    <title>หน้าหลัก - My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* CSS ร่วมสำหรับทุกหน้าเพื่อธีมพาสเทลฟ้าน้ำเงินขยับได้ */
-        * {
+        /* CSS เฉพาะสำหรับสไตล์และธีมสีชมพูพาสเทล */
+        :root {
+            --pink-primary:#78A3D4 ;
+            --pink-light:#AFD5F0 ;
+            --pink-dark:#C3EEFA;
+            --text-color: #DAFAFA;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--pink-light);
+            color: var(--text-color);
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Sarabun', sans-serif;
-        }
-
-        /* เอฟเฟกต์พื้นหลังสีฟ้า-น้ำเงินพาสเทลขยับได้ */
-        body {
-            min-height: 100vh;
-            background: linear-gradient(-45deg, #d4f1f9, #a9def9, #e8f0fe, #b3c5ff);
-            background-size: 400% 400%;
-            animation: gradientBG 12s ease infinite;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            color: #2b3e50;
+            min-height: 100vh;
         }
 
-     gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* เมนูนำทาง (Navigation Bar) */
         nav {
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(10px);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            display: flex;
-            justify-content: center;
-            z-index: 1000;
+            background-color: #ffffff;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
         }
 
         nav a {
+            color: var(--pink-dark);
             text-decoration: none;
-            color: #465a7a;
-            font-weight: bold;
             margin: 0 15px;
-            padding: 8px 16px;
-            border-radius: 20px;
-            transition: all 0.3s ease;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
-        nav a:hover, nav a.active {
-            background-color: #4682b4;
-            color: white;
-            box-shadow: 0 4px 10px rgba(70, 130, 180, 0.3);
+        nav a:hover {
+            color: #ff8fab;
+            text-shadow: 0 0 8px rgba(251, 111, 146, 0.4);
         }
 
-        /* การจัดรูปเลย์เอาต์ของกล่องเนื้อหา */
         .container {
             max-width: 800px;
-            width: 90%;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(10px);
-            padding: 40px;
-            border-radius: 25px;
-            margin: 40px 0;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin: 40px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            transform: translateY(0);
-            animation: floatUp 1s ease-out;
+            animation: fadeIn 1s ease-in-out;
         }
 
-        @keyframes floatUp {
+        /* เอฟเฟกต์กรอบรูป */
+        .profile-frame {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 6px solid var(--pink-primary);
+            margin: 0 auto 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(251, 111, 146, 0.2);
+            transition: transform 0.5s ease;
+        }
+
+        .profile-frame:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+
+        .profile-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* เอฟเฟกต์ปุ่ม */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--pink-dark);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(251, 111, 146, 0.3);
+        }
+
+        .btn:hover {
+            background-color: #ff8fab;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(251, 111, 146, 0.5);
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        h1 {
-            color: #1e3a8a;
-            margin-bottom: 15px;
-            font-size: 2.2rem;
-        }
-
-        p {
-            color: #4b5563;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 28px;
-            background-color: #4f46e5;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: background 0.3s;
-            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
-        }
-
-        .btn:hover {
-            background-color: #4338ca;
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #a3a3a3;
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="index.html" class="active">หน้าแรก</a>
+        <a href="index.html">หน้าหลัก</a>
         <a href="about.html">ประวัติส่วนตัว</a>
         <a href="education.html">ประวัติการศึกษา</a>
         <a href="portfolio.html">ผลงาน/กิจกรรม</a>
-        <a href="contact.html">ช่องทางติดต่อ</a>
+        <a href="contact.html">ช่องทางการติดต่อ</a>
     </nav>
 
     <div class="container">
-        <h1>WelcomePortfolio my</h1>
-        <p> ขอเชิญทุกท่านกดเลือกดูตามเมนูด้านบนได้เลยค่ะ</p>
-        <a href="about.html" class="btn">ทำความรู้จักกันเลย</a>
+        <!-- ใส่รูปภาพของคุณที่นี่ -->
+        <div class="profile-frame">
+            <img src="profile.jpg" alt="รูปโปรไฟล์">
+        </div>
+        <h1>ยินดีต้อนรับสู่ Portfolio ของฉัน</h1>
+        <p>สวัสดีค่ะ/ครับ ฉันเป็นนักเรียนชั้นมัธยมศึกษาปีที่ 6 ที่มีความสนใจในด้านเทคโนโลยีและการพัฒนาเว็บไซต์ ยินดีที่ได้รู้จักทุกคนค่ะ/ครับ!</p>
+        <a href="about.html" class="btn">ทำความรู้จักกันเพิ่มขึ้น</a>
     </div>
+
+    <footer>
+        © 2026 Designed with 💗 by Student M.6
+    </footer>
 
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <title>แสดงรูปภาพ</title>
-</head>
-<body>
-
-   <img src="my-photo.jpg" alt="temp_image_5C19CA7A-DC8D-46F" width="500">
-</head>
-</body>
