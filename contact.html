@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ช่องทางการติดต่อ - My Portfolio</title>
+    <style>
+        :root { --pink-primary: #ffb7c5; --pink-light: #ffe5ec; --pink-dark: #fb6f92; --text-color: #4a4a4a; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: var(--pink-light); color: var(--text-color); margin: 0; padding: 0; }
+        nav { background-color: #ffffff; padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; }
+        nav a { color: var(--pink-dark); text-decoration: none; margin: 0 15px; font-weight: bold; transition: 0.3s; }
+        nav a:hover { color: #ff8fab; }
+        .container { max-width: 600px; margin: 40px auto; padding: 30px; background: #ffffff; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: center; animation: fadeIn 1s ease-in-out; }
+        h2 { color: var(--pink-dark); }
+        
+        /* สไตล์ไอคอนผู้ติดต่อ */
+        .contact-method { display: block; padding: 15px; margin: 15px 0; background-color: var(--pink-light); color: var(--text-color); text-decoration: none; border-radius: 15px; font-weight: bold; transition: all 0.3s ease; }
+        .contact-method:hover { background-color: var(--pink-primary); color: white; transform: scale(1.03); }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">หน้าหลัก</a>
+        <a href="about.html">ประวัติส่วนตัว</a>
+        <a href="education.html">ประวัติการศึกษา</a>
+        <a href="portfolio.html">ผลงาน/กิจกรรม</a>
+        <a href="contact.html">ช่องทางการติดต่อ</a>
+    </nav>
+
+    <div class="container">
+        <h2>ช่องทางการติดต่อ (Contact Me)</h2>
+        <p>คุณสามารถติดต่อหรือติดตามผลงานของฉันเพิ่มเติมได้ที่ช่องทางด้านล่างนี้เลยค่ะ/ครับ</p>
+        
+        <!-- แทนที่เครื่องหมาย # ด้วยลิงก์จริงของคุณ เช่น https://facebook.com/yourusername -->
+        <a href="#" class="contact-method" target="_blank">📧 Email: bunmeechulalak@email.com</a>
+        <a href="#" class="contact-method" target="_blank">📘 Facebook: Your Facebook Name chulalak Bunmee</a>
+        <a href="#" class="contact-method" target="_blank">📸 Instagram: @_mua_yyy</a>
+        <a href="#" class="contact-method" target="_blank">🐙 GitHub: muayy555</a>
+    </div>
+
+</body>
+</html>
