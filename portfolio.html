@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ผลงานและกิจกรรม - My Portfolio</title>
+    <style>
+        :root { --pink-primary: #ffb7c5; --pink-light: #ffe5ec; --pink-dark: #fb6f92; --text-color: #4a4a4a; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: var(--pink-light); color: var(--text-color); margin: 0; padding: 0; }
+        nav { background-color: #ffffff; padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; }
+        nav a { color: var(--pink-dark); text-decoration: none; margin: 0 15px; font-weight: bold; transition: 0.3s; }
+        nav a:hover { color: #ff8fab; }
+        
+        .container { max-width: 1000px; margin: 40px auto; padding: 30px; background: #ffffff; border-radius: 20px; text-align: center; }
+        h2 { color: var(--pink-dark); }
+        
+        /* Grid สำหรับการ์ดผลงาน */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
+        .card { background: #fff; border: 2px solid var(--pink-light); border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.02); transition: all 0.3s ease; }
+        
+        /* เอฟเฟกต์เมื่อ Hover ที่กล่องผลงาน */
+        .card:hover { transform: translateY(-10px); box-shadow: 0 12px 20px rgba(251, 111, 146, 0.2); border-color: var(--pink-primary); }
+        
+        .card-img { width: 100%; height: 180px; background-color: #eee; background-size: cover; background-position: center; }
+        .card-content { padding: 15px; text-align: left; }
+        .card-content h3 { margin: 0 0 10px 0; color: var(--pink-dark); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">หน้าหลัก</a>
+        <a href="about.html">ประวัติส่วนตัว</a>
+        <a href="education.html">ประวัติการศึกษา</a>
+        <a href="portfolio.html">ผลงาน/กิจกรรม</a>
+        <a href="contact.html">ช่องทางการติดต่อ</a>
+    </nav>
+
+    <div class="container">
+        <h2>ผลงานและกิจกรรม (Projects & Activities)</h2>
+        <div class="grid">
+            <!-- ผลงานชิ้นที่ 1 -->
+            <div class="card">
+                <!-- สามารถเปลี่ยนค่านำทางรูปภาพใน style="background-image: url('ชื่อรูป.jpg')" ได้ -->
+                <div class="card-img" style="background-image: url('project1.jpg');"></div>
+                <div class="card-content">
+                    <h3>โปรเจกต์พัฒนาเว็บไซต์ Portfolio</h3>
+                    <p>ฝึกฝนการใช้ HTML และ CSS ในการสร้างเว็บไซต์แสดงตัวตนเพื่อใช้ยื่นศึกษาต่อระดับมหาวิทยาลัย</p>
+                </div>
+            </div>
+            <!-- ผลงานชิ้นที่ 2 -->
+            <div class="card">
+                <div class="card-img" style="background-image: url('activity1.jpg');"></div>
+                <div class="card-content">
+                    <h3>กิจกรรมค่ายคอมพิวเตอร์</h3>
+                    <p>เข้าร่วมอบรมเชิงปฏิบัติการเกี่ยวกับวิทยาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศ ณ มหาวิทยาลัย...</p>
+                </div>
+            </div>
+            <!-- ผลงานชิ้นที่ 3 -->
+            <div class="card">
+                <div class="card-img" style="background-image: url('award1.jpg');"></div>
+                <div class="card-content">
+                    <h3>การแข่งขันตอบปัญหาวิชาการ</h3>
+                    <p>ได้รับรางวัลเข้าร่วม/รองชนะเลิศ ในการแข่งขันทักษะความรู้ด้านคอมพิวเตอร์ระดับโรงเรียน</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+เขียนข้อความ
+เขียนถึง Thawanrat Bupphajai
